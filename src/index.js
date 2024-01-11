@@ -9,7 +9,8 @@ import { rootReducer } from './reducers'
 const store = createStore(rootReducer)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-
+console.log(store.getState())
+store.subscribe(() => console.log(store.getState()))
 root.render(
   <React.StrictMode>
     <Provider store={store}>

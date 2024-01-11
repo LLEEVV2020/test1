@@ -1,20 +1,12 @@
 import { useDispatch } from 'react-redux'
 
-import { ADD_TODO } from './types'
+import { addTodoAction } from './actions'
 
 function App() {
-  console.log(ADD_TODO)
   const dispatch = useDispatch()
 
   const handleTodoAdd = () => {
-    dispatch({
-      type: ADD_TODO,
-      payload: {
-        id: 1,
-        text: 'Изучить Redux',
-        done: false,
-      },
-    })
+    dispatch(addTodoAction)
   }
 
   return (
